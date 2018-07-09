@@ -1,0 +1,22 @@
+PODS:
+  - SDAutoLayout (2.2.0)
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
+
+DEPENDENCIES:
+  - SDAutoLayout
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDAutoLayout
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+
+PODFILE CHECKSUM: bb2f401b955e261af8aed617eb91a254a055da8b
+
+COCOAPODS: 1.5.3
