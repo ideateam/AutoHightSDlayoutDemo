@@ -19,7 +19,16 @@
         self.pubtext = [NSString stringWithFormat:@"%@",dictionary[@"pubtext"]];
         self.pubtime = [NSString stringWithFormat:@"%@",dictionary[@"pubtime"]];
         self.headimg = [NSString stringWithFormat:@"%@",dictionary[@"headimg"]];
-        self.pubimgarrays = [NSArray arrayWithArray:dictionary[@"pubimgarrays"]];
+        NSString *dicStr = [NSString stringWithFormat:@"%@",dictionary[@"pubimgarrays"]];
+//        if (dicStr != nil && dictionary[@"pubimgarrays"] != [NSNull class] && dicStr != [NSNull class] && dicStr.length != 0 && dictionary[@"pubimgarrays"] == [NSArray class]){
+        
+            self.pubimgarrays = [NSArray arrayWithArray:dictionary[@"pubimgarrays"]];
+            
+//        }else{
+//            
+//            self.pubimgarrays = [[NSArray alloc] init];
+//        }
+    
         self.datatype = [NSString stringWithFormat:@"%@",dictionary[@"datatype"]];
         self.comments = [NSString stringWithFormat:@"%@",dictionary[@"comments"]];
     }

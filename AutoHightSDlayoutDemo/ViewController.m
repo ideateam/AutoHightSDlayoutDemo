@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "FriendCircleTableViewCell.h"
 #import "MyModel.h"
-#import "SDAutoLayout.h"
+#import <SDAutoLayout.h>
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;

@@ -32,6 +32,7 @@
 @property (nonatomic,strong) UIImageView *imageView7;
 @property (nonatomic,strong) UIImageView *imageView8;
 @property (nonatomic,strong) UIImageView *imageView9;
+@property (nonatomic,strong) UIButton *imageViewMoreBtn;
 
 
 
