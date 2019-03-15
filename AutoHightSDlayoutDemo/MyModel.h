@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface MyModel : NSObject
-@property (nonatomic,copy) NSString *name;
-@property (nonatomic,copy) NSString *pubtime;
-@property (nonatomic,copy) NSString *pubtext;
-@property (nonatomic,copy) NSString *headimg;
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) NSString *pubtime;
+@property (nonatomic,strong) NSString *pubtext;
+@property (nonatomic,strong) NSString *headimg;
 @property (nonatomic,strong) NSArray *pubimgarrays;
-@property (nonatomic,copy) NSString *comments;
-@property (nonatomic,copy) NSString *datatype;
+@property (nonatomic,strong) NSString *comments;
+@property (nonatomic,strong) NSString *datatype;
+@property (nonatomic,strong) NSArray *commentsArr;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 +(instancetype)modelWithDictionary:(NSDictionary *)dictionary;

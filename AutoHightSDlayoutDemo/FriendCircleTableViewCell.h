@@ -11,7 +11,7 @@
 #import "SDAutoLayout.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface FriendCircleTableViewCell : UITableViewCell
+@interface FriendCircleTableViewCell : UITableViewCell<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UILabel *name;
 @property (nonatomic,strong) UILabel *pubtime;
 @property (nonatomic,strong) UILabel *pubtext;
@@ -34,6 +34,7 @@
 @property (nonatomic,strong) UIImageView *imageView9;
 @property (nonatomic,strong) UIButton *imageViewMoreBtn;
 
-
+@property (nonatomic,strong) NSMutableArray *commentArray;
+@property (nonatomic,strong) UITableView *insideTableView;
 
 @end

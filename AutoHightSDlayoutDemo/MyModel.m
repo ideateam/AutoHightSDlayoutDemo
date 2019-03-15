@@ -31,6 +31,7 @@
     
         self.datatype = [NSString stringWithFormat:@"%@",dictionary[@"datatype"]];
         self.comments = [NSString stringWithFormat:@"%@",dictionary[@"comments"]];
+        self.commentsArr = dictionary[@"commentsarrays"];
     }
     
     return self;

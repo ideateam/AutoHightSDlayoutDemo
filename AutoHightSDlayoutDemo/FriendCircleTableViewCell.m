@@ -26,6 +26,7 @@
     [self.contentView addSubview:self.headimg];
     [self.contentView addSubview:self.name];
     [self.contentView addSubview:self.pubtext];
+    [self.contentView addSubview:self.pubtime];
     [self.contentView addSubview:self.pubimgarrayView];
     [self.contentView addSubview:self.comments];
     
@@ -173,12 +174,13 @@
     
     
     self.headimg.sd_layout.topSpaceToView(self.contentView, 5).leftSpaceToView(self.contentView, 15).widthIs(40).heightIs(40);
-    self.name.sd_layout.topSpaceToView(self.contentView, 5).leftSpaceToView(self.headimg, 5).widthIs(100).heightIs(40);
-    self.pubtext.sd_layout.topSpaceToView(self.headimg, 10).leftSpaceToView(self.contentView, 15 + 40 + 5).rightSpaceToView(self.contentView, 15).autoHeightRatio(0);
+    self.name.sd_layout.topSpaceToView(self.contentView, 5).leftSpaceToView(self.headimg, 5).rightSpaceToView(self.contentView, 15).heightIs(40);
+    self.pubtime.sd_layout.topSpaceToView(self.name, 0).leftSpaceToView(self.headimg, 5).rightSpaceToView(self.contentView, 15).heightIs(20);
+    self.pubtext.sd_layout.topSpaceToView(self.pubtime, 10).leftSpaceToView(self.contentView, 15 + 40 + 5).rightSpaceToView(self.contentView, 15).autoHeightRatio(0);
     //[self.pubtext setSingleLineAutoResizeWithMaxWidth:200];
     
     
-    
+    //判断有几张图片 最多九张
     if (self.pubimgarrays != nil && self.pubimgarrays.count != 0 && ![self.pubimgarrays isKindOfClass:[NSNull class]]) {
         
         if (self.pubimgarrays.count > 9) {
@@ -459,7 +461,6 @@
     if (!_pubtime) {
         _pubtime = [[UILabel alloc] init];
         _pubtime.font = [UIFont systemFontOfSize:12];
-        _pubtime.backgroundColor = [UIColor purpleColor];
     }
     return _pubtime;
 }
